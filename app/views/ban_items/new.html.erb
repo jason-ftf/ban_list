@@ -1,0 +1,15 @@
+<%= form_with model: BanItem.new, url: ban_items_path, method: :post do |form| %>
+  <div class="mb-4">
+    <%= form.label :email %></br>
+    <%= form.text_field :email, class: 'border p-2' %>
+  </div>
+  <div class="mb-4">
+    <%= form.label :ip %></br>
+    <%= form.text_field :ip, class: 'border p-2' %>
+  </div>
+  <div class="mb-4">
+    <%= form.button class: 'bg-blue-400 text-white rounded p-2 text-center' do %>
+      <span>Add to ban list</span>
+    <% end %>
+  </div>
+<% end %>
